@@ -3,11 +3,11 @@
 Косачев Павел
 
 
-#include <stdlib.h
-#include <iostream>											
-#include <math.h>								
-using namespace::std;
-double pika(int k);
+#include <stdlib.h  // подключение библиотек
+#include <iostream>	// подключение библиотек										
+#include <math.h>	//подключение библиотеки для работы с мат.функциями							
+using namespace::std; // обьявление пространства имен std
+double pika(int k); // можно я не буду все строчки комментировать???
 double sigma(int k, int piko);
 void main()											
 {	/* предусловие : пользователь вводит значение k
