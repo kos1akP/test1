@@ -1,3 +1,55 @@
 здравствуйте!!!
 (отредактировал)
 Косачев Павел
+
+
+#include <stdlib.h
+#include <iostream>											
+#include <math.h>								
+using namespace::std;
+double pika(int k);
+double sigma(int k, int piko);
+void main()											
+{	/* предусловие : пользователь вводит значение k
+	постусловие : программа выводит значение функции для данного k*/
+	system("chcp 1251");								
+	double i, s1, k, n, pr, sum, w, piko;					
+	cout << "введите значение k" << endl;			
+	cin >> k;	// ввод
+	piko = pika(k);
+	cout << "pika = " << piko << endl;
+	cout << "w = " << sigma(k, piko) << endl;
+}														
+double pika(int k)
+{
+	int i = -3; int pr1; int pr; pr = 1; int n = i;
+	do
+	{
+		if (n == 2)
+		{
+			cout << " не считали при n = 2" << endl;
+		}
+		else
+		{
+			pr1 = (pow(n, 3) - 8) / (n + 4);
+			pr *= pr1;
+			cout << "pr = " << pr << endl;
+		}
+		n++;
+	} while (n <= 2 * k);
+	return pr;
+}
+double sigma(int k, int piko)
+{
+	int i = -3; double s1; double s = 0;
+	do
+	{
+
+		s1 = (pow(-1, i)) * pika(k) / (pow(i - 5, 2));
+		cout << "s1 = " << s1 << endl;
+		s += s1;
+		i++;
+		cout << "s = " << s << endl;
+	} while (i <= k);
+	return s;
+}
